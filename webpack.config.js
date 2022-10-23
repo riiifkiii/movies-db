@@ -9,12 +9,17 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
+    rules: [{
+      test: /\.css$/i,
+      use: [
+        // Creates `style` nodes from JS strings
+        "style-loader",
+        // Translates CSS into CommonJS
+        "css-loader",
+        // Compiles Sass to CSS
+        // "sass-loader",
+      ],
+    }]
   },
   devServer: {
     client: {

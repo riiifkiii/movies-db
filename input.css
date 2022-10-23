@@ -25,13 +25,13 @@ header .btn-menu {
     md:hidden;
 }
 
-header .menu-link {
+header .menu {
   @apply hidden absolute justify-between items-center p-2 rounded left-1/2 -translate-x-1/2 top-[80px] bg-slate-900 text-center
     md:flex md:static md:p-0 md:w-full md:-translate-x-0 md:ml-[50px]
     lg:flex;
 }
 
-header .menu-link li {
+header .menu li {
   @apply hover:bg-red-600 rounded py-2
     md:inline-block md:mr-3 md:py-0 md:text-sm md:relative md:hover:bg-transparent md:hover:before:absolute md:hover:before:w-1/2 md:hover:before:h-[3px] md:hover:before:left-1/2 md:hover:before:bg-red-600 md:hover:before:-translate-x-1/2 md:hover:before:-bottom-1 md:hover:before:rounded md:hover:text-red-600
     lg:text-base;
@@ -52,4 +52,24 @@ header .input-group button {
   @apply absolute flex items-center justify-center bg-red-600 hover:bg-red-500 w-[30px] h-[30px] rounded left-[5px] top-1/2 -translate-y-1/2
     md:h-[25px] md:w-[25px] md:left-[2px] md:text-xs
     lg:h-[30px] lg:w-[30px] lg:left-[5px];
+}
+
+.splide .splide__arrow {
+  @apply hidden;
+}
+
+.splide .splide__pagination {
+  @apply right-1 left-auto;
+}
+
+.splide .splide__pagination .splide__pagination__page {
+  @apply bg-white;
+}
+
+.splide .splide__pagination .splide__pagination__page.is-active {
+  @apply bg-white flex justify-center items-center before:bg-red-600 before:w-[6px] before:h-[6px] before:rounded-full;
+}
+
+.splide .splide__slide img {
+  @apply w-full h-[500px];
 }

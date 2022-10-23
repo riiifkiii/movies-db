@@ -551,40 +551,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .font-poppins {
   font-family: Ubuntu, sans-serif;
 }
@@ -648,7 +614,7 @@ header .btn-menu {
   }
 }
 
-header .menu-link {
+header .menu {
   position: absolute;
   left: 50%;
   top: 80px;
@@ -665,7 +631,7 @@ header .menu-link {
 }
 
 @media (min-width: 768px) {
-  header .menu-link {
+  header .menu {
     position: static;
     margin-left: 50px;
     display: flex;
@@ -677,24 +643,24 @@ header .menu-link {
 }
 
 @media (min-width: 1024px) {
-  header .menu-link {
+  header .menu {
     display: flex;
   }
 }
 
-header .menu-link li {
+header .menu li {
   border-radius: 0.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-header .menu-link li:hover {
+header .menu li:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  header .menu-link li {
+  header .menu li {
     position: relative;
     margin-right: 0.75rem;
     display: inline-block;
@@ -704,13 +670,13 @@ header .menu-link li:hover {
     line-height: 1.25rem;
   }
 
-  header .menu-link li:hover {
+  header .menu li:hover {
     background-color: transparent;
     --tw-text-opacity: 1;
     color: rgb(220 38 38 / var(--tw-text-opacity));
   }
 
-  header .menu-link li:hover::before {
+  header .menu li:hover::before {
     position: absolute;
     left: 50%;
     bottom: -0.25rem;
@@ -726,7 +692,7 @@ header .menu-link li:hover {
 }
 
 @media (min-width: 1024px) {
-  header .menu-link li {
+  header .menu li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -812,4 +778,40 @@ header .input-group button:hover {
     height: 30px;
     width: 30px;
   }
+}
+
+.splide .splide__arrow {
+  display: none;
+}
+
+.splide .splide__pagination {
+  right: 0.25rem;
+  left: auto;
+}
+
+.splide .splide__pagination .splide__pagination__page {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.splide .splide__pagination .splide__pagination__page.is-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.splide .splide__pagination .splide__pagination__page.is-active::before {
+  height: 6px;
+  width: 6px;
+  border-radius: 9999px;
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.splide .splide__slide img {
+  height: 500px;
+  width: 100%;
 }
