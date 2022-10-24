@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
 
 header {
-  @apply px-[20px] bg-slate-900
+  @apply px-[20px] bg-black
     lg:px-[100px];
 }
 
@@ -25,13 +25,13 @@ header .btn-menu {
     md:hidden;
 }
 
-header .menu {
-  @apply hidden absolute justify-between items-center p-2 rounded left-1/2 -translate-x-1/2 top-[80px] bg-slate-900 text-center
+header .menu-link {
+  @apply hidden absolute justify-between items-center p-2 rounded left-1/2 -translate-x-1/2 top-[80px] bg-black text-center z-10
     md:flex md:static md:p-0 md:w-full md:-translate-x-0 md:ml-[50px]
     lg:flex;
 }
 
-header .menu li {
+header .menu-link li {
   @apply hover:bg-red-600 rounded py-2
     md:inline-block md:mr-3 md:py-0 md:text-sm md:relative md:hover:bg-transparent md:hover:before:absolute md:hover:before:w-1/2 md:hover:before:h-[3px] md:hover:before:left-1/2 md:hover:before:bg-red-600 md:hover:before:-translate-x-1/2 md:hover:before:-bottom-1 md:hover:before:rounded md:hover:text-red-600
     lg:text-base;
@@ -54,12 +54,16 @@ header .input-group button {
     lg:h-[30px] lg:w-[30px] lg:left-[5px];
 }
 
+.splide {
+  @apply lg:ml-[100px] lg:h-[500px];
+}
+
 .splide .splide__arrow {
   @apply hidden;
 }
 
 .splide .splide__pagination {
-  @apply right-1 left-auto;
+  @apply right-1 left-auto lg:right-[100px] lg:bottom-5;
 }
 
 .splide .splide__pagination .splide__pagination__page {

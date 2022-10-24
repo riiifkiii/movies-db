@@ -551,6 +551,35 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .font-poppins {
   font-family: Ubuntu, sans-serif;
 }
@@ -567,7 +596,7 @@ video {
 
 header {
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -614,10 +643,11 @@ header .btn-menu {
   }
 }
 
-header .menu {
+header .menu-link {
   position: absolute;
   left: 50%;
   top: 80px;
+  z-index: 10;
   display: none;
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -625,13 +655,13 @@ header .menu {
   justify-content: space-between;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   padding: 0.5rem;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  header .menu {
+  header .menu-link {
     position: static;
     margin-left: 50px;
     display: flex;
@@ -643,24 +673,24 @@ header .menu {
 }
 
 @media (min-width: 1024px) {
-  header .menu {
+  header .menu-link {
     display: flex;
   }
 }
 
-header .menu li {
+header .menu-link li {
   border-radius: 0.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-header .menu li:hover {
+header .menu-link li:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  header .menu li {
+  header .menu-link li {
     position: relative;
     margin-right: 0.75rem;
     display: inline-block;
@@ -670,13 +700,13 @@ header .menu li:hover {
     line-height: 1.25rem;
   }
 
-  header .menu li:hover {
+  header .menu-link li:hover {
     background-color: transparent;
     --tw-text-opacity: 1;
     color: rgb(220 38 38 / var(--tw-text-opacity));
   }
 
-  header .menu li:hover::before {
+  header .menu-link li:hover::before {
     position: absolute;
     left: 50%;
     bottom: -0.25rem;
@@ -692,7 +722,7 @@ header .menu li:hover {
 }
 
 @media (min-width: 1024px) {
-  header .menu li {
+  header .menu-link li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -778,6 +808,11 @@ header .input-group button:hover {
     height: 30px;
     width: 30px;
   }
+
+  .splide {
+    margin-left: 100px;
+    height: 500px;
+  }
 }
 
 .splide .splide__arrow {
@@ -787,6 +822,13 @@ header .input-group button:hover {
 .splide .splide__pagination {
   right: 0.25rem;
   left: auto;
+}
+
+@media (min-width: 1024px) {
+  .splide .splide__pagination {
+    right: 100px;
+    bottom: 1.25rem;
+  }
 }
 
 .splide .splide__pagination .splide__pagination__page {
@@ -814,4 +856,32 @@ header .input-group button:hover {
 .splide .splide__slide img {
   height: 500px;
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .lg\:mb-\[50px\] {
+    margin-bottom: 50px;
+  }
+
+  .lg\:w-\[530px\] {
+    width: 530px;
+  }
+
+  .lg\:w-\[600px\] {
+    width: 600px;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .lg\:font-bold {
+    font-weight: 700;
+  }
 }
