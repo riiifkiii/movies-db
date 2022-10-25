@@ -71,9 +71,24 @@ header .input-group button {
 }
 
 .splide .splide__pagination .splide__pagination__page.is-active {
-  @apply bg-white flex justify-center items-center before:bg-red-600 before:w-[6px] before:h-[6px] before:rounded-full;
+  @apply bg-white flex justify-center items-center 
+  before:bg-red-600 before:w-[6px] before:h-[6px] before:rounded-full;
+}
+
+.splide .splide__slide {
+  @apply relative;
+}
+
+.splide .splide__slide .start {
+  @apply flex justify-center flex-col absolute left-0 z-10 
+    lg:w-[800px] lg:h-full;
+}
+
+.splide .splide__slide .end {
+  @apply absolute right-0 w-[60%] h-full 
+  before:absolute before:bg-gradient-to-r before:from-black before:top-0 before:left-0 before:w-full before:h-full;
 }
 
 .splide .splide__slide img {
-  @apply w-full h-[500px];
+  @apply w-full h-[500px] object-cover;
 }

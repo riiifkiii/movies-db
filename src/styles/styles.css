@@ -551,28 +551,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
-.z-0 {
-  z-index: 0;
+.relative {
+  position: relative;
 }
 
 .mb-\[10px\] {
   margin-bottom: 10px;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .bg-black {
@@ -853,22 +837,56 @@ header .input-group button:hover {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+.splide .splide__slide {
+  position: relative;
+}
+
+.splide .splide__slide .start {
+  position: absolute;
+  left: 0px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .splide .splide__slide .start {
+    height: 100%;
+    width: 800px;
+  }
+}
+
+.splide .splide__slide .end {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 60%;
+}
+
+.splide .splide__slide .end::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  content: var(--tw-content);
+  --tw-gradient-from: #000;
+  --tw-gradient-to: rgb(0 0 0 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .splide .splide__slide img {
   height: 500px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 1024px) {
   .lg\:mb-\[50px\] {
     margin-bottom: 50px;
-  }
-
-  .lg\:w-\[530px\] {
-    width: 530px;
-  }
-
-  .lg\:w-\[600px\] {
-    width: 600px;
   }
 
   .lg\:text-4xl {
